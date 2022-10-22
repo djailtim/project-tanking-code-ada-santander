@@ -73,4 +73,8 @@ public class Display {
     public static void printMessage(String message) {
         System.out.println(message);
     }
+
+    public static void printMessage(String message, Double value) {
+        System.out.printf(message, value);
+    }
 }

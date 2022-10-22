@@ -1,5 +1,4 @@
 import java.io.IOException;
-import java.util.Arrays;
 
 public class App {
     public static void main(String[] args) throws IOException, InterruptedException {
@@ -10,9 +9,9 @@ public class App {
         Double[][] temperatures = CalculateTemperatures.conversions(quantity,temperatureUnit1, temperatureUnit2);
 
         Double averageTypedTemperatures = CalculateTemperatures.calculateAverage(temperatures[0]);
-        Display.printMessage("\n\nA média das temperaturas digitadas é: " + averageTypedTemperatures);
+        Display.printMessage("\n\nA média das temperaturas digitadas é: %.2f", averageTypedTemperatures);
 
         Double averageConvertedTemperatures = CalculateTemperatures.calculateAverage(temperatures[1]);
-        Display.printMessage("A média das temperaturas convertidas é: " + averageConvertedTemperatures);
+        Display.printMessage("\nA média das temperaturas convertidas é: %.2f", averageConvertedTemperatures);
     }
 }
